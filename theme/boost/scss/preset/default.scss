@@ -1,0 +1,414 @@
+// Bootstrap variables
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #8f959e !default;
+$gray-600: #6a737b !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #1d2125 !default;
+$black: #000 !default;
+
+$blue: #0f6cbf !default;
+$indigo: #6610f2 !default;
+$purple: #613d7c !default;
+$pink: #e83e8c !default;
+$red: #ca3120 !default;
+$orange: #f0ad4e !default;
+$yellow: #ff7518 !default;
+$green: #357a32 !default;
+$teal: #20c997 !default;
+$cyan: #008196 !default;
+
+$primary: $blue !default;
+$success: $green !default;
+$info: $cyan !default;
+$warning: $orange !default;
+$danger: $red !default;
+$secondary: $gray-400 !default;
+
+$info-outline: #1f7e9a;
+$warning-outline: #a6670e;
+
+// Tables
+$table-accent-bg: rgba($black, 0.03) !default;
+
+// Options
+$enable-responsive-font-sizes: true !default;
+
+// Body
+$body-color: $gray-900 !default;
+
+// Fonts
+$font-size-base: 0.9375rem !default;
+$rfs-base-font-size: 0.9rem !default;
+$headings-font-weight: 700 !default;
+
+// Navbar
+$navbar-dark-hover-color: rgba($white, 1) !default;
+$navbar-light-color: rgba($black, 0.6) !default;
+$navbar-light-hover-color: rgba($black, 0.9) !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y: 0.5rem !default;
+$breadcrumb-padding-x: 0 !default;
+$breadcrumb-item-padding: 0.5rem !default;
+$breadcrumb-margin-bottom: 0 !default;
+$breadcrumb-bg: transparent !default;
+$breadcrumb-divider: "/" !default;
+$breadcrumb-divider-rtl: "/" !default;
+
+// Alerts
+$alert-border-width: 0 !default;
+
+$card-group-margin: 0.25rem;
+
+// Toasts
+$toast-color: $white !default;
+$toast-background-color: rgba($gray-900, 0.95) !default;
+$toast-header-color: $gray-100 !default;
+$toast-header-background-color: rgba($white, 0.1) !default;
+
+// Custom control size
+$custom-control-indicator-size: 1.25rem;
+
+$input-btn-focus-color: rgba($primary, 0.75) !default;
+
+$input-border-color: $gray-500 !default;
+
+$dropdown-link-hover-color: $white;
+$dropdown-link-hover-bg: $primary;
+
+$popover-max-width: 300px !default;
+
+$border-radius: 0.5rem !default;
+$border-radius-lg: 0.6rem !default;
+
+// stylelint-disable
+$theme-colors: () !default;
+$theme-colors: map-merge(
+  (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+  ),
+  $theme-colors
+);
+// stylelint-enable
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: (
+    $spacer * 0.25,
+  ),
+  2: (
+    $spacer * 0.5,
+  ),
+  3: $spacer,
+  4: (
+    $spacer * 1.5,
+  ),
+  5: (
+    $spacer * 2,
+  ),
+  6: (
+    $spacer * 3,
+  ),
+) !default;
+
+// Import FontAwesome.
+@import "fontawesome";
+
+// Import All of Bootstrap
+@import "bootstrap";
+
+// Import Core moodle CSS
+@import "moodle";
+
+// Preset CSS
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+// Rounded user pictures
+.userpicture {
+  border-radius: 50%;
+}
+
+// Reset the default styling back to the bootstrap defaults for
+// the secondary outline button because gray-200 is much too light
+// for an outline button.
+.btn-outline-secondary {
+  @include button-outline-variant($gray-600);
+  border-color: $gray-600;
+}
+
+.btn-outline-info {
+  @include button-outline-variant($info-outline);
+}
+
+.btn-outline-warning {
+  @include button-outline-variant($warning-outline);
+}
+
+@include bg-variant(".bg-gray", $gray-200, true);
+
+.navbar.fixed-top {
+  height: unset !important;
+  padding: unset !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.mdb-nav-top {
+  display: flex;
+  justify-content: center;
+  background-color: #2a3d98;
+}
+
+.mdb-nav-top div {
+  text-transform: uppercase;
+  padding: 6px;
+  font-size: 12px;
+  font-family: system-ui;
+  font-weight: 500;
+  color: white;
+}
+
+.mdb-nav-top .nav-item-active {
+  background-color: white;
+  color: #2a3d98 !important;
+}
+
+.mdb-nav-bottom {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.primary-navigation .nav-link {
+  color: #595958;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.primary-navigation .navigation .nav-link {
+  height: unset;
+  color: #595958;
+  font-size: 13px;
+}
+
+.primary-navigation .navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moremenu {
+  opacity: 1 !important;
+}
+
+.moremenu.navigation.observed {
+  display: flex;
+  align-items: center;
+}
+
+.primary-navigation {
+  margin-left: 20px;
+}
+
+.moremenu .nav-link.active {
+  color: #595958 !important;
+  border-color: transparent !important;
+}
+
+[data-key="home"] {
+  display: none !important;
+}
+
+.popover-region {
+  margin: 0 6px 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#page.drawers {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+#page-wrapper #page-footer {
+  min-height: 100px;
+}
+
+.footer-top {
+  background-color: #2a3d98 !important;
+}
+
+.footer-bottom {
+  background-color: white !important;
+}
+
+.footer-help {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 40px 30px;
+  justify-content: space-between;
+  margin: auto !important;
+}
+
+.footer-top {
+  color: white;
+  text-align: left;
+  .h1 {
+    font-size: 25px;
+    position: relative;
+    input::placeholder {
+      color: white;
+    }
+    .arrow {
+      position: absolute;
+      right: 0;
+      svg {
+        height: 20px;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 5px;
+      color: white;
+      font-size: 14px !important;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid white;
+    }
+  }
+  .h2 {
+    display: flex;
+    align-items: start;
+    font-size: 12px;
+    label {
+      padding: 0 5px;
+      max-width: 400px;
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  padding: 30px;
+  margin: unset;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  .link-box-title {
+    color: #2a3d98;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .link-box-content {
+    margin-bottom: 5px;
+    color: #595958;
+  }
+}
+
+.pagelayout-standard #page.drawers .footer-popover,
+body.limitedwidth #page.drawers .footer-popover {
+  max-width: unset !important;
+}
+
+.sectionname.course-content-item {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.section.course-section {
+  padding: 5px 0 5px 10px;
+  border: 1px solid #838383 !important;
+}
+
+[class="topics"] {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+  padding-top: unset;
+  padding-bottom: unset;
+}
+
+.expandall.text-nowrap {
+  color: black;
+  font-size: 14px;
+}
+.collapsed-icon svg {
+  height: 20px;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.nav-link {
+  font-size: 14px;
+  font-weight: 500;
+  color: #595958;
+  border-bottom: 1px solid transparent;
+}
+
+body .moremenu .nav-link.active {
+  color: #2a3d98 !important;
+  border-bottom: 1px solid #2a3d98 !important;
+}
+
+.moremenu .nav-link {
+  height: unset;
+}
+
+.secondary-navigation .navigation {
+  border: unset !important;
+}
+
+.courseindex-section {
+  border: 1px solid #595958 !important;
+}
+
+#course-index {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#inst12 .no-overflow {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+#inst11,
+#inst12 {
+  border: none !important;
+}
+
+#inst11 p {
+  text-align: center !important;
+}

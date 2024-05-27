@@ -1,0 +1,56 @@
+// ACCORDION
+.course-content ul.topics li.section,
+.course-content ul.weeks li.section {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  border: 1px solid #838383;
+  margin-bottom: 5px;
+}
+
+.sectionname {
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  font-weight: 100 !important;
+  font-family: inherit !important;
+  padding: 12px !important;
+}
+
+.icons-collapse-expand {
+  display: none !important;
+}
+
+.expandall.text-nowrap {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+// ACCORDION
+
+// TABS
+
+.secondary-navigation .navigation .nav-tabs .nav-link {
+  padding: 0px;
+  border-radius: initial;
+  margin: 0 20px;
+  height: unset;
+  color: #838383;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.nav-link.active {
+  background: transparent;
+  color: #2a3d98 !important;
+}
+
+.moremenu .nav-link.active {
+  background-color: transparent;
+  border-color: transparent;
+  border-bottom-color: #2a3d98;
+}
+
+.moremenu.navigation.observed {
+  display: flex;
+  align-items: center;
+}
+// TABS

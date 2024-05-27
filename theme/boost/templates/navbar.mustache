@@ -1,0 +1,107 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+
+    @template theme_boost/navbar
+
+    This template renders the top navbar.
+
+    Example context (json):
+    {
+        "output": {
+            "should_display_navbar_logo": true,
+            "get_compact_logo_url": "http://placekitten.com/50/50",
+            "custom_menu": "<li>..</li>",
+            "page_heading_menu": "<li>..</li>",
+            "search_box": "<div><input type='text'></div>",
+            "navbar_plugin_output": "<div class='dropdown'>Messaging</div>",
+            "user_menu": "<div class='dropdown'>John Doe</div>"
+        },
+        "config": {
+            "wwwroot": "#",
+            "homeurl": "/my/"
+        },
+        "sitename": "Moodle Site",
+        "mobileprimarynav": [
+            {
+                "text": "Dashboard",
+                "url": "/my",
+                "isactive": true
+            },
+            {
+                "text": "Site home",
+                "url": "/",
+                "isactive": false
+            },
+            {
+                "text": "My courses",
+                "url": "/course",
+                "isactive": false
+            }
+        ]
+    }
+}}
+<nav class="navbar fixed-top navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+    <div class="mdb-nav-top">
+        <div>Sklep detaliczny</div>
+        <div>Sklep profesionalny</div>
+        <div class="nav-item-active">Platforma edukacyjna</div>
+    </div>
+    <div class="mdb-nav-bottom">
+        <button class="navbar-toggler aabtn d-block d-md-none px-1 my-1 border-0" data-toggler="drawers" data-action="toggle" data-target="theme_boost-drawers-primary">
+            <span class="navbar-toggler-icon"></span>
+            <span class="sr-only">{{#str}}sidepanel, core{{/str}}</span>
+        </button>
+        
+        <a href="{{{ config.homeurl }}}">
+            <svg xmlns="http://www.w3.org/2000/svg" width="218" height="53">
+                <path fill="#2a3d98" d="M106 31s-6.059.114-8.122-2.371C95.818 26.155 87 14.873 87 14.873s7.747-8.685 9.328-10.649c2.39-2.964 7.834-2.11 7.834-2.11L93.015 14.86zm-21-1.662C85 30.57 84.397 31 83.289 31H80V3.537C80 2.332 80.348 2 81.42 2H85zM171.745 4.08c0-.951.365-1.756 1.638-1.756 1.994 0 3.617.01 3.617.01V33l-19.699-19.985V29.73c0 .846-.586 1.493-1.488 1.493H152V0l19.745 20.582zM66 31s-6.079.113-8.188-2.387c-2.106-2.5-9.077-10.992-9.105-11.038h5.146c2.062 0 3.629-.453 4.717-1.366 1.076-.914 1.615-2.269 1.615-4.058 0-1.768-.539-3.097-1.615-3.98-1.088-.881-2.655-1.323-4.717-1.323h-6.41v22.364c0 1.194-.427 1.787-1.488 1.787H42V3.927C42 2.893 42.667 2 43.91 2h9.943c3.683 0 6.527.87 8.53 2.608 2.008 1.74 3.006 4.205 3.006 7.378 0 5.204-3.469 9.4-7.44 9.4zm152-.52s-5.815.036-7.206-2.865c-1.39-2.901-8.183-15.954-8.183-15.954s-6.463 13.467-7.693 16.217C193.688 30.626 188 31 188 31l14.492-30zM142 31s-5.814-.065-7.155-3.015c-1.341-2.95-7.906-16.232-7.906-16.232s-6.694 13.47-7.97 16.22C117.694 30.724 112 31 112 31l15-30zM30 31s-5.814-.065-7.155-3.015c-1.341-2.95-7.906-16.232-7.906-16.232s-6.694 13.47-7.969 16.22C5.693 30.724 0 31 0 31L15 1zm164 21.265V53h-5v-8h4.881v.723h-4.228v2.897h4.031v.7h-4.03v2.945zm-8.108.607L186 53h-.924l-2.505-2.972h-1.873V53H180v-8h3.255c1.61-.002 2.44 1.263 2.448 2.52v.025c0 .65-.198 1.263-.603 1.714-.38.423-.941.688-1.666.723zm-2.699-3.566c.618 0 1.052-.189 1.334-.502.283-.314.42-.76.425-1.296v-.024c-.003-.879-.547-1.77-1.697-1.771h-2.557v3.593zM173.383 45L177 53h-.822l-.872-1.928h-4.622l-.86 1.928H169l3.618-8zm-.39.846l-2.005 4.514h4.014zm-7.929-.17c-2.209.003-3.332 1.52-3.338 3.32v.026c.026 1.768 1.14 3.277 3.338 3.281a3.41 3.41 0 0 0 2.374-.954l.052-.05.052.048.4.374.056.051-.054.056a4.095 4.095 0 0 1-2.88 1.172c-2.655.004-4.058-1.851-4.064-3.956v-.05c0-1.032.342-2.03 1.025-2.772.682-.74 1.703-1.222 3.04-1.222 1.038 0 2.087.39 2.879 1.174l.056.056-.524.45-.05-.05a3.331 3.331 0 0 0-2.362-.955M153 45v.11l-2.675 4.697V53h-.66v-3.193L147 45.109V45h.718l2.278 4.062L152.282 45zm-14 0h6v.69h-2.647V53h-.706v-7.31H139zm-3 0v4.886c0 1.03-.375 1.814-.94 2.335-.564.521-1.314.779-2.063.779-.747 0-1.497-.258-2.06-.779-.564-.52-.939-1.302-.937-2.335V45h.726v4.886c.002 1.624 1.131 2.413 2.271 2.417 1.142-.004 2.273-.797 2.275-2.417V45zm-11.616 0L128 53h-.822l-.87-1.928h-4.624l-.86 1.928H120l3.618-8zm-.388.846l-2.008 4.514h4.014zm-10.341 6.42H118V53h-5v-8h4.881v.725h-4.226v2.896h4.03v.7h-4.03zm-6.013-3.37c.862.326 1.358 1.1 1.358 1.976.002.832-.381 1.379-.924 1.699-.543.32-1.24.429-1.9.429H103v-8h3.177c.65 0 1.287.164 1.766.526.48.36.797.924.797 1.691a1.778 1.778 0 0 1-1.098 1.679zm-1.389-.342c.447 0 .9-.073 1.235-.276.332-.204.55-.522.553-1.06 0-.55-.235-.928-.584-1.181-.35-.251-.821-.369-1.28-.369h-2.446v2.886zM107.589 52c.409-.209.688-.545.69-1.138-.006-.587-.26-.972-.639-1.225-.379-.251-.889-.359-1.387-.359h-2.522v2.987h2.446c.47 0 1.006-.059 1.412-.265zm-15.174-7c2.385-.002 3.547 1.95 3.583 3.908l.002.103c0 .996-.288 1.995-.882 2.744-.592.749-1.494 1.247-2.703 1.245H90v-8h2.415m0 7.265c1.991-.002 2.91-1.65 2.916-3.278l-.002-.075c-.032-1.608-.95-3.185-2.914-3.19h-1.746v6.543h1.746m-9.76 0H87V53h-5v-8h4.881v.725h-4.226v2.896h4.03v.7h-4.03zm-7.59-6.59c-2.21.004-3.333 1.521-3.339 3.323v.024c.028 1.768 1.14 3.277 3.338 3.281.857 0 1.725-.323 2.376-.954l.05-.052.054.05.398.374.056.051-.054.056A4.092 4.092 0 0 1 75.064 53c-2.655.004-4.058-1.851-4.064-3.956v-.05c0-1.032.342-2.03 1.025-2.772.682-.74 1.703-1.222 3.04-1.222 1.038 0 2.089.39 2.879 1.174l.056.056-.524.45-.048-.05a3.339 3.339 0 0 0-2.364-.955M68 45v8h-.332l-4.945-6.344V53H62v-8h.354l4.933 6.354V45zm-11.616 0L60 53h-.822l-.87-1.928h-4.624L52.824 53H52l3.618-8zm-.39.846l-2.006 4.514h4.014zM51 45l-3.14 8h-.718L44 45h.779l2.722 7.029L50.223 45zm-13.585 0c2.385-.002 3.547 1.95 3.583 3.908l.002.103c0 .996-.288 1.995-.882 2.744-.594.749-1.494 1.247-2.703 1.245H35v-8h2.415m0 7.265c1.991-.002 2.91-1.65 2.916-3.278l-.002-.075c-.034-1.608-.95-3.185-2.914-3.19h-1.746v6.543h1.746M28.383 45L32 53h-.824l-.87-1.928h-4.623L24.824 53H24l3.617-8zm-.388.846l-2.008 4.514h4.014z"></path>
+            </svg>
+        </a>
+
+        {{#primarymoremenu}}
+            <div class="primary-navigation">
+                {{> core/moremenu}}
+            </div>
+        {{/primarymoremenu}}
+
+        <ul class="navbar-nav d-none d-md-flex my-1 px-1">
+            <!-- page_heading_menu -->
+            {{{ output.page_heading_menu }}}
+        </ul>
+
+        <div id="usernavigation" class="s navbar-nav ml-auto">
+            {{# output.search_box }}
+                {{{ output.search_box }}}
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            {{/output.search_box}}
+            {{#langmenu}}
+                {{> theme_boost/language_menu }}
+                <div class="divider border-left h-75 align-self-center mx-1"></div>
+            {{/langmenu}}
+            {{{ output.navbar_plugin_output }}}
+            <div class="d-flex align-items-stretch usermenu-container" data-region="usermenu">
+                {{#usermenu}}
+                    {{> core/user_menu }}
+                {{/usermenu}}
+            </div>
+            {{{ output.edit_switch }}}
+        </div>
+    </div>
+</nav>
+
+{{> theme_boost/primary-drawer-mobile }}
