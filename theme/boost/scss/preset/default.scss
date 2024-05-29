@@ -416,3 +416,27 @@ body .moremenu .nav-link.active {
 #inst18 p {
   text-align: center !important;
 }
+
+.activity-item,
+.btn-outline-secondary {
+  border-radius: 0 !important;
+}
+
+.section .activity {
+  padding-bottom: 0 !important;
+}
+
+.course-content ul.topics li.section {
+  padding: 8px !important;
+}
+
+.activitybadge.badge.badge-pill.badge-none,
+.resourcedetails {
+  display: none;
+}
+
+.courseindex .courseindex-item,
+.activity-add,
+.block-add {
+  border-radius: 0 !important;
+}
