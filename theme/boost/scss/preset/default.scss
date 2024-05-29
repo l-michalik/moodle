@@ -399,16 +399,20 @@ body .moremenu .nav-link.active {
   gap: 10px;
 }
 
-#inst12 .no-overflow {
+#inst12 .no-overflow,
+#inst19 .no-overflow p {
   display: grid;
   grid-template-columns: auto auto;
 }
 
 #inst11,
-#inst12 {
+#inst18,
+#inst12,
+#inst19 {
   border: none !important;
 }
 
-#inst11 p {
+#inst11 p,
+#inst18 p {
   text-align: center !important;
 }
