@@ -440,3 +440,10 @@ body .moremenu .nav-link.active {
 .block-add {
   border-radius: 0 !important;
 }
+
+.activity-info {
+  display: flex;
+  justify-content: right;
+  text-align: right;
+  margin-top: 10px !important;
+}

@@ -49,21 +49,7 @@ Example context (json):
 <div class="activity-instance d-flex flex-column">
     <div class="activitytitle media {{textclasses}} modtype_{{modname}} position-relative align-self-start">
         <div class="activityiconcontainer {{purpose}} courseicon align-self-start mr-3">
-            {{#isWeb}}
-            <img src="../../../../../../theme/boost/pix/products.svg" class="activityicon {{iconclass}}"
-                alt="{{{modname}}} icon">
-            {{/isWeb}}
-            {{#isPdf}}
-            <img src="../../../../../../theme/boost/pix/books.svg" class="activityicon {{iconclass}}"
-                alt="{{{modname}}} icon">
-            {{/isPdf}}
-            {{#isFile}}
-            <img src="../../../../../../theme/boost/pix/books.svg" class="activityicon {{iconclass}}"
-                alt="{{{modname}}} icon">
-            {{/isFile}}
-            {{#isDef}}
             <img src="{{{icon}}}" class="activityicon {{iconclass}}" alt="{{{modname}}} icon">
-            {{/isDef}}
         </div>
         <div class="media-body align-self-center">
             {{#pluginname}}
@@ -73,10 +59,6 @@ Example context (json):
             {{/pluginname}}
             <div class="activityname">
                 {{#activityname}}
-                {{isWeb}}
-                {{isPdf}}
-                {{isFile}}
-                {{isDef}}
                 {{$ core/inplace_editable }}
                 {{> core/inplace_editable }}
                 {{/ core/inplace_editable }}

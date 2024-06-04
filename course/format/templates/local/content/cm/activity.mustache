@@ -74,14 +74,6 @@
                 {{{afterlink}}}
             </div>
         {{/afterlink}}
-
-        {{#activityinfo}}
-            <div class="activity-info mt-1 mt-md-0">
-                {{$ core_courseformat/local/content/cm/activity_info}}
-                    {{> core_courseformat/local/content/cm/activity_info}}
-                {{/ core_courseformat/local/content/cm/activity_info}}
-            </div>
-        {{/activityinfo}}
     </div>
 
     {{#controlmenu}}
@@ -124,4 +116,14 @@
             {{> core_courseformat/local/content/cm/availability }}
         {{/ core_courseformat/local/content/cm/availability }}
     {{/modavailability}}
+</div>
+
+<div>
+    {{#activityinfo}}
+        <div class="activity-info mt-1 mt-md-0">
+            {{$ core_courseformat/local/content/cm/activity_info}}
+                {{> core_courseformat/local/content/cm/activity_info}}
+            {{/ core_courseformat/local/content/cm/activity_info}}
+        </div>
+    {{/activityinfo}}
 </div>

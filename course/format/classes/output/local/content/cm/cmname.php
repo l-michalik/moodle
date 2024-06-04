@@ -108,10 +108,6 @@ class cmname implements named_templatable, renderable {
             'textclasses' => $displayoptions['textclasses'] ?? '',
             'purpose' => plugin_supports('mod', $mod->modname, FEATURE_MOD_PURPOSE, MOD_PURPOSE_OTHER),
             'activityname' => $this->get_title_data($output),
-            'isWeb' => strpos($iconurl, 'url/1716903640/monologo'),
-            'isPdf' => strpos($iconurl, 'core/1716903640/f/pdf'),
-            'isFile' => strpos($iconurl, 'core/1716903640/f/image'),
-            'isDef' => !strpos($iconurl, 'url/1716903640/monologo') &&  !strpos($iconurl, 'core/1716903640/f/image') && !strpos($iconurl, 'core/1716903640/f/pdf')
         ];
 
         if ($this->format->show_editor()) {
